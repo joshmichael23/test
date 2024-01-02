@@ -1,22 +1,392 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap');
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 :root{
-    --black: rgb(46,53,56);
-    --dark: rgb(66,77,81);
-    --teal: rgb(128, 179, 170);
-    --cream: rgb(236, 217, 203);
-    --lightcream: rgb(243, 233, 224);
+    --black: #000000;
+
+    --cambridgeblue: #8BA691;
+    --teal:  rgb(93, 128, 127);
+    --lightblue: rgb(39, 60, 80);
+    --darkblue: rgb(12, 19, 46);
 }
 
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+body{
+    background-color: rgb(21, 21, 21);
+    
+}
+
+h1{
+    font-size: 5rem;
+    color: white;
+}
+
+
+
+h2{
+    color: var(--cambridgeblue);
+    font-size: 4.5rem;
+}
+
+p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--teal);
+}
+
+    .hello{
+        font-size: 1.5rem;
+    }
+
+
 .wrapper{
-    height: 100vh;
+    
+
     width: 100vw;
+    font-family: "Josefin Sans";
     display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: auto 1fr;
+}
+
+header{
+    background-color: var(--cambridgeblue);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    padding: 1rem 2rem;
+
+}
+
+.headerLogo{
+    object-fit: contain;
+}
+
+.logoContainer{
+    height: 100%;
+    display: flex;
+
+}
+
+.links{
+    
+    display:flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    color:rgb(93, 128, 127);
+}
+
+.links > a{
+    cursor: pointer;
+    color:white;
+}
+
+.test{
+    width: 100%;
+}
+.profile-pic{
+  
+    border-radius: 5rem;
+    background-color: gainsboro;
+    border: 10px solid var(--cambridgeblue);
+}
+
+.main-content{
+    height: 95vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr  ;
+    
+}
+
+.description-content{
+    gap: 1rem;
+
+}
+
+.profile-container{
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: end;
+   
+}
+
+.profile-container > img {
+    transform: scale(100%);
+    transition: transform .2s ease;
+}
+
+.profile-container > img:hover{
+    transform: scale(110%);
+}
+
+
+
+.skills{
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    padding: 5rem 0rem; 
+    display:grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    flex-wrap: wrap;
     align-items: center;
     justify-items: center;
 }
 
-body{
-    background-color: var(--black);
-    color: var(--cream);
+.skill{
+    display: grid;
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    justify-items: center;
+    transform: scale(100%);
+    transition: transform .2s ease;
+}
+
+
+.skill:hover{
+    transform: scale(120%);
+}
+
+.project{
+    padding: 5rem 0rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.project > h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.projects > a {
+    text-decoration: none;
+}
+
+.challenge{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.challenge > h2{
+    font-size: 1.5rem;
+    position: relative;
+    display: inline;
+    
+}
+
+.challenge > h2::after{
+    position: absolute;
+    left:50%;
+    bottom: -5px;
+    content: '';
+    background-color: white;
+    height: 2px;
+    width: 0;
+    transition: all .2s ease;
+}
+
+.challenge:hover > h2::after{
+    left:0;
+    width: 100%;
+}
+
+.challenge > img {
+    box-shadow: 0px 0px 0rem transparent;
+    border: 2px solid var(--teal);
+    transition: all .2s ease-in-out;
+    transform: scale(100%);
+}
+.challenge:hover > img{
+    box-shadow: 0px 0px 2rem var(--teal);
+    transform: scale(110%);
+}
+
+.challenge:nth-child(9){
+    grid-column: 2/3;
+}
+
+footer{
+    background-color: var(--cambridgeblue);
+    color:white;
+    width: 100%;
+    padding: 15px 15%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer > .contactMe{
+    color: white;
+    background-color: transparent;
+}
+
+.contactMe{
+    display: flex;
+    gap: 1rem;
+}
+.contactMe > h1{
+    color: white; 
+    font-size: 1.5rem;
+}
+
+.contactMe > ul{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.contactMe > ul > li{
+    list-style: none;
+}
+
+.downloadResume{
+    cursor: pointer;
+    color:white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 1rem;
+    transition: all .2s;
+}
+
+.downloadResume:hover{
+    background-color: var(--teal);
+    border: 1px solid var(--teal);
+}
+
+@media screen and (min-width: 280px) {
+    .wrapper{
+        padding: 1rem 1rem;
+    }
+
+    .main-content{
+        grid-template-columns: 1fr;
+        width:100%;
+        height: 100%;
+        gap: 2rem;
+        padding: 2rem 0px;
+    }
+
+    .main-content > .profile-container{
+        grid-row: 1/2;
+    }
+
+    .main-content > .description-content{
+        text-align: center;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .skills{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skill{
+        height:auto;
+        width: auto;
+    }
+    .projects{
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .challenge:nth-child(9) {
+        grid-column: auto;
+    }
+    
+
+    footer{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .contactMe{
+        flex-direction: column;
+    }
+
+    .contactMe > ul{
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .wrapper{
+        padding: 2.5rem 5rem;
+    }
+
+
+    .main-content{
+        grid-template-columns: 1fr 1fr;
+        height: 90vh;
+        padding: 0px;
+        gap: 0px;
+    }
+
+    .main-content > .description-content{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        align-items: start;
+        text-align: start;
+    }
+
+    .main-content > .profile-container{
+        grid-row: auto;
+    }
+
+    .skills{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skill{
+        height:300px;
+        width: 300px;
+    }
+
+    .projects{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .challenge:nth-child(9) {
+        grid-column: 2/3;
+    }
+
+    footer{
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .contactMe{
+        flex-direction: row;
+    }
+
+    .contactMe > ul{
+        flex-direction: row;
+    }
+
 }
