@@ -58,17 +58,49 @@ export default function Home() {
               </a>
 
               <a href="https://jquery.com" className="skill jquery">
-                <img src={'./logos/jquery.png'} alt="React Logo" />
+                <img src={'./logos/jquery.png'} alt="Jquery Logo" />
+              </a>
+
+              <a href="https://sass-lang.com" className='skill sass'>
+                <img src={'./logos/sass.png'} alt="Sass Logo" />
+              </a>
+
+              <a href="https://tailwindcss.com" className='skill tailwind'>
+                <img src={'./logos/tailwlind.png'} alt="Tailwind Logo" />
+              </a>
+
+              <a href="https://vitejs.dev" className='skill vite'>
+                <img src={'./logos/vite.png'} alt="Vite Logo" />
               </a>
             </section>
 
             <section className='project'>
-              <h1>Projects</h1>
+              <h1>Frontend Mentor Projects</h1>
               <div className='projects'>
                 
-                  <a href="https://advice-generator-app-main-seven-theta.vercel.app" className='challenge'><img src={'./screenshots/advice-generator.png'} alt="Project's Screenshot"/>
+                <a href="https://ecomm-psi-seven.vercel.app" className="challenge">
+                <img src={'./screenshots/ecommerce.png'} alt="Project's Screenshot"/>
+                  <h2>E-commerce</h2>
+                </a>
+
+                <a href="https://comments-brown-five.vercel.app" className='challenge'>
+                  <img src={'./screenshots/interactive-comments.png'} alt="Project's Screenshot"/>
+                  <h2>Interactive Comments</h2>
+                </a>
+
+                <a href="https://roomhomepage-jade.vercel.app" className='challenge'>
+                  <img src={'./screenshots/room-homepage.png'} alt="Project's Screenshot"/>
+                  <h2>Room Landing Page</h2>
+                </a>
+
+                <a href="https://calculator-hazel-rho.vercel.app" className='challenge'>
+                  <img src={'./screenshots/calculator.png'} alt="Project's Screenshot"/>
+                  <h2>Calculator</h2>
+                </a>
+
+                <a href="https://advice-generator-app-main-seven-theta.vercel.app" className='challenge'><img src={'./screenshots/advice-generator.png'} alt="Project's Screenshot"/>
                   <h2>Advice Generator</h2>
-                  </a>
+                </a>
 
                 <a href="https://age-calculator-app-weld.vercel.app" className="challenge">
                   <img src={'./screenshots/age-calculator.png'} alt="Project's Screenshot"/>

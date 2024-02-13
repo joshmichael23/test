@@ -224,9 +224,6 @@ header{
     transform: scale(110%);
 }
 
-.challenge:nth-child(9){
-    grid-column: 2/3;
-}
 
 footer{
     background-color: var(--cambridgeblue);
@@ -316,9 +313,7 @@ footer > .contactMe{
         align-items: start;
     }
 
-    .challenge:nth-child(9) {
-        grid-column: auto;
-    }
+
     
 
     footer{
@@ -373,7 +368,7 @@ footer > .contactMe{
         grid-template-columns: repeat(4, 1fr);
     }
     
-    .challenge:nth-child(9) {
+    .challenge:nth-child(13) {
         grid-column: 2/3;
     }
 
